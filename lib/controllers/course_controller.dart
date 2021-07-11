@@ -92,7 +92,7 @@ class CourseController extends GetxController
   Future<void> deleteStudentRoom(String roomId) async {
     try {
       var url = Uri.parse(getDeleteRoomAPI(roomId));
-      await http.post(url);
+      await http.get(url);
       acceptableRooms.removeWhere((e) => e.roomId == roomId);
       unAcceptableRooms.removeWhere((e) => e.roomId == roomId);
       getToast("Item deleted successfully");

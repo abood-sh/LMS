@@ -36,6 +36,7 @@ class CourseItem extends StatelessWidget {
               },
         child: Slidable(
           actionPane: SlidableDrawerActionPane(),
+          enabled: viewLectureData ? false : true,
           child: Padding(
             padding: EdgeInsets.symmetric(horizontal: 15.w, vertical: 15.h),
             child: Row(
@@ -65,7 +66,7 @@ class CourseItem extends StatelessWidget {
               iconWidget: Icon(
                 Icons.delete_rounded,
                 size: 24.w,
-                color: Colors.blue[800],
+                color: Colors.red[800],
               ),
               onTap: () => controller.deleteStudentRoom(room.roomId),
             ),
@@ -76,7 +77,7 @@ class CourseItem extends StatelessWidget {
               iconWidget: Icon(
                 Icons.delete_rounded,
                 size: 24.w,
-                color: Colors.blue[800],
+                color: Colors.red[800],
               ),
               onTap: () => controller.deleteStudentRoom(room.roomId),
             ),
