@@ -89,12 +89,12 @@ class CourseController extends GetxController
     }
   }
 
-  Future<void> deleteStudentRoom(String roomId) async {
+  Future<void> deleteStudentRoom(int roomId) async {
     try {
       var url = Uri.parse(getDeleteRoomAPI(roomId));
       await http.get(url);
-      acceptableRooms.removeWhere((e) => e.roomId == roomId);
-      unAcceptableRooms.removeWhere((e) => e.roomId == roomId);
+      acceptableRooms.removeWhere((e) => e.id == roomId);
+      unAcceptableRooms.removeWhere((e) => e.id == roomId);
       getToast("Item deleted successfully");
     } catch (e) {
       print("error: ${e.toString()}");

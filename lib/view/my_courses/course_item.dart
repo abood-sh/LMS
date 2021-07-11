@@ -68,7 +68,7 @@ class CourseItem extends StatelessWidget {
                 size: 24.w,
                 color: Colors.red[800],
               ),
-              onTap: () => controller.deleteStudentRoom(room.roomId),
+              onTap: () => controller.deleteStudentRoom(room.id),
             ),
           ],
           secondaryActions: <Widget>[
@@ -79,7 +79,7 @@ class CourseItem extends StatelessWidget {
                 size: 24.w,
                 color: Colors.red[800],
               ),
-              onTap: () => controller.deleteStudentRoom(room.roomId),
+              onTap: () => controller.deleteStudentRoom(room.id),
             ),
           ],
         ),

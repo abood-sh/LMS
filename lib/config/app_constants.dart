@@ -25,7 +25,7 @@ String getRegisterRoomAPI(int userId, int profId, String roomId) {
   return "http://www.glory.palgooal.com/MLS/public/API/reisterUserRoom/$roomId/$userId/$profId";
 }
 
-String getDeleteRoomAPI(String roomId) {
+String getDeleteRoomAPI(int roomId) {
   return "http://www.glory.palgooal.com/MLS/public/API/deleteStudentRoom/$roomId";
 }
 
