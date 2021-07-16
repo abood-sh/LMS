@@ -16,6 +16,7 @@ class CourseItem extends StatelessWidget {
   final controller = Get.find<CourseController>();
   @override
   Widget build(BuildContext context) {
+    print("eeee:${room.id}");
     return Card(
       elevation: 2,
       margin: EdgeInsets.only(bottom: 8.h),
@@ -66,7 +67,7 @@ class CourseItem extends StatelessWidget {
               iconWidget: Icon(
                 Icons.delete_rounded,
                 size: 24.w,
-                color: Colors.red[800],
+                color: Colors.blue[800],
               ),
               onTap: () => controller.deleteStudentRoom(room.id),
             ),
@@ -77,7 +78,7 @@ class CourseItem extends StatelessWidget {
               iconWidget: Icon(
                 Icons.delete_rounded,
                 size: 24.w,
-                color: Colors.red[800],
+                color: Colors.blue[800],
               ),
               onTap: () => controller.deleteStudentRoom(room.id),
             ),
